@@ -2,7 +2,7 @@
 
 import numpy as np
 import pygame as pg
-from GAME_pygame.KeepingNasaAfloat.Animations.Simulation.Constants import *
+from KeepingNasaAfloat.Animations.Simulation.Constants import *
 from math import *
 
 # Definition for distance

@@ -1,8 +1,8 @@
 import os
 import pygame
 
-from GAME_pygame.KeepingNasaAfloat.Sequences.Tutorial import *
-from GAME_pygame.KeepingNasaAfloat.Functions.KNA_functions import *
+from KeepingNasaAfloat.Sequences.Tutorial import *
+from KeepingNasaAfloat.Functions.KNA_functions import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
@@ -43,23 +43,17 @@ class JFK:
         # Set up background and self.display size
 
         if over_two_hundred:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Atomic_war.jpg')
-            image2 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Atomic_war2.jpg')
-            image3 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Atomic_war3.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Atomic_war.jpg')
+            image2 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Atomic_war2.jpg')
+            image3 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Atomic_war3.jpg')
             self.background = [image1, image2, image3]
             for i in range(3):
                 self.background[i] = pygame.transform.scale(self.background[i], (455, 683))
 
         else:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon.jpg')
-            image2 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon2.jpg')
-            image3 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon3.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon.jpg')
+            image2 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon2.jpg')
+            image3 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Soviets_get_to_the_Moon3.jpg')
             self.background = [image1, image2, image3]
             self.background[0] = pygame.transform.scale(self.background[0], (1214, 683))
             for i in range(2):
@@ -73,8 +67,7 @@ class JFK:
 
         # Set up sounds
 
-        self.s = pygame.mixer.Sound("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Audio\\"
-                                    "Typewriter click.wav")
+        self.s = pygame.mixer.Sound("KeepingNasaAfloat\\Audio\\Typewriter click.wav")
 
         # Pick over-200 or 0 outcome
         self.over_two_hundred = over_two_hundred
@@ -102,8 +95,7 @@ class JFK:
 
         # Set up font for introduction of the game
 
-        font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Fonts\\"
-                                "atwriter.ttf", font_size)
+        font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\atwriter.ttf", font_size)
 
         if self.over_two_hundred:
             a = 0
@@ -184,13 +176,11 @@ class JFK:
     def endgame(self):
 
         if self.over_two_hundred:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\Sheldon Allman - Crawl Out Through the Fallout.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\Sheldon Allman - Crawl Out Through the Fallout.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
         else:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\USSR National Anthem.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\USSR National Anthem.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
 

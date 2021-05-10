@@ -1,8 +1,8 @@
 import os
 import pygame
 
-from GAME_pygame.KeepingNasaAfloat.Sequences.Tutorial import *
-from GAME_pygame.KeepingNasaAfloat.Functions.KNA_functions import *
+from KeepingNasaAfloat.Sequences.Tutorial import *
+from KeepingNasaAfloat.Functions.KNA_functions import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
@@ -43,14 +43,12 @@ class Money:
         # Set up background and self.display size
 
         if over_two_hundred:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\Too_much_money.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Too_much_money.jpg')
             self.background = [image1]
             self.background[0] = pygame.transform.scale(self.background[0], (985, 683))
 
         else:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                       'Sprites\\Endings\\Lose\\No_funds.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\No_funds.jpg')
             self.background = [image1]
             self.background[0] = pygame.transform.scale(self.background[0], (455, 683))
 
@@ -62,8 +60,7 @@ class Money:
 
         # Set up sounds
 
-        self.s = pygame.mixer.Sound("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Audio\\"
-                                    "Typewriter click.wav")
+        self.s = pygame.mixer.Sound("KeepingNasaAfloat\\Audio\\Typewriter click.wav")
 
         # Pick over-200 or 0 outcome
         self.over_two_hundred = over_two_hundred
@@ -91,8 +88,7 @@ class Money:
 
         # Set up font for introduction of the game
 
-        font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Fonts\\"
-                                "atwriter.ttf", font_size)
+        font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\atwriter.ttf", font_size)
 
         if self.over_two_hundred:
             a = 0
@@ -173,13 +169,11 @@ class Money:
     def endgame(self):
 
         if self.over_two_hundred:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\The Big Short - OST.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\The Big Short - OST.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
         else:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\Curb Your Enthusiasm Theme.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\Curb Your Enthusiasm Theme.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
 

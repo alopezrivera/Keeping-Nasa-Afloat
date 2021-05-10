@@ -1,8 +1,8 @@
 import os
 import pygame
 
-from GAME_pygame.KeepingNasaAfloat.Sequences.Tutorial import *
-from GAME_pygame.KeepingNasaAfloat.Functions.KNA_functions import *
+from KeepingNasaAfloat.Sequences.Tutorial import *
+from KeepingNasaAfloat.Functions.KNA_functions import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
@@ -43,11 +43,9 @@ class Stanley:
         # Set up background and self.display size
 
         if over_two_hundred:
-            self.background = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                                'Sprites\\Endings\\Lose\\Stanley_takes_control_of_the_space_program.jpg')
+            self.background = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Stanley_takes_control_of_the_space_program.jpg')
         else:
-            self.background = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                                'Sprites\\Endings\\Lose\\Stanley_ousts_space_program.jpg')
+            self.background = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Lose\\Stanley_ousts_space_program.jpg')
         self.background = pygame.transform.scale(self.background, (455, 683))
         size = self.background.get_rect().size
         self.display = pygame.display.set_mode(size)
@@ -58,8 +56,7 @@ class Stanley:
 
         # Set up sounds
 
-        self.s = pygame.mixer.Sound("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Audio\\"
-                                    "Typewriter click.wav")
+        self.s = pygame.mixer.Sound("KeepingNasaAfloat\\Audio\\Typewriter click.wav")
 
         # Pick over-200 or 0 outcome
         self.over_two_hundred = over_two_hundred
@@ -87,8 +84,7 @@ class Stanley:
 
         # Set up font for introduction of the game
 
-        font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Fonts\\"
-                                "atwriter.ttf", font_size)
+        font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\atwriter.ttf", font_size)
 
         if self.over_two_hundred:
             a = 0
@@ -168,13 +164,11 @@ class Stanley:
     def endgame(self):
 
         if self.over_two_hundred:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\A Clockwork Orange - An Overture to the Sun.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\A Clockwork Orange - An Overture to the Sun.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
         else:
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Lose\\Dominic Glover - Ready and Rough.mp3")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Lose\\Dominic Glover - Ready and Rough.mp3")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
 

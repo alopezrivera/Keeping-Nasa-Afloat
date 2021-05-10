@@ -1,4 +1,4 @@
-from GAME_pygame.KeepingNasaAfloat.Classes.Button import *
+from KeepingNasaAfloat.Classes.Button import *
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -34,7 +34,7 @@ class Intro_screen:
         self.play_easy_button = StartButton(WHITE, 37.5, 475, 380, 70)
         self.top_scores_button = StartButton(WHITE, 37.5, 565, 380, 70)
 
-    def let_the_game_begin(self):
+    def let_the_game_begin(self, music=True):
 
         """
 
@@ -43,32 +43,25 @@ class Intro_screen:
         """
 
         # Countdown sound effect
-        s = pygame.mixer.Sound('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                               'Audio\\Countdown.wav')
+        s = pygame.mixer.Sound('KeepingNasaAfloat\\Audio\\Countdown.wav')
         empty_channel = pygame.mixer.find_channel()
         empty_channel.play(s)
-        pygame.mixer.music.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                'Audio\\Louis Armstrong - La Vie en Rose.wav')
-        pygame.mixer.music.set_volume(0.1)
-        pygame.mixer.music.play(-1)
+        if music is True:
+            pygame.mixer.music.load('KeepingNasaAfloat\\Audio\\Louis Armstrong - La Vie en Rose.wav')
+            pygame.mixer.music.set_volume(0.1)
+            pygame.mixer.music.play(-1)
 
         # Background image
         background = pygame.image.load(
-            'C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\Sprites\\'
-            'startscreen_take_off.jpg')
+            'KeepingNasaAfloat\\Sprites\\startscreen_take_off.jpg')
         background = pygame.transform.scale(background, self.size)
 
         # Title setup
-        Title_font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\"
-                                      "KeepingNasaAfloat\\Fonts\\Copyrighted\\Southern Aire\\"
-                                      "SouthernAire_Personal_Use_Only.ttf", 100)
+        Title_font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\Copyrighted\\Southern Aire\\SouthernAire_Personal_Use_Only.ttf", 100)
 
-        NASA_font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\"
-                                     "KeepingNasaAfloat\\Fonts\\NASA.otf", 110)
+        NASA_font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\NASA.otf", 110)
 
-        Credits_font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\"
-                                        "KeepingNasaAfloat\\Fonts\\Copyrighted\\Brannboll\\"
-                                        "BrannbollFS_PERSONAL.ttf", 20)
+        Credits_font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\Copyrighted\\Brannboll\\BrannbollFS_PERSONAL.ttf", 20)
 
         fonts = [Title_font, NASA_font, Title_font, Credits_font]
         title = ['Keeping', 'NASA', 'Afloat!', "Antonio Lopez Rivera and Roman Chiva's"]

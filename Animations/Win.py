@@ -1,5 +1,5 @@
-from GAME_pygame.KeepingNasaAfloat.Sequences.Tutorial import *
-from GAME_pygame.KeepingNasaAfloat.Functions.KNA_functions import *
+from KeepingNasaAfloat.Sequences.Tutorial import *
+from KeepingNasaAfloat.Functions.KNA_functions import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
@@ -40,25 +40,20 @@ class Win:
         # Set up background and self.display size
 
         if not fake:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\'
-                                       'KeepingNasaAfloat\\Sprites\\Endings\\Win\\Moon_landing.jpg')
-            image2 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\'
-                                       'KeepingNasaAfloat\\Sprites\\Endings\\Win\\Moon_landing2.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Win\\Moon_landing.jpg')
+            image2 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Win\\Moon_landing2.jpg')
             self.background = [image1, image2]
             self.background[0] = pygame.transform.scale(self.background[0], (683, 683))
             self.background[1] = pygame.transform.scale(self.background[1], (1250, 683))
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Win\\2001 A Space Odissey - OST.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Win\\2001 A Space Odissey - OST.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
 
         else:
-            image1 = pygame.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\'
-                                       'KeepingNasaAfloat\\Sprites\\Endings\\Win\\Kubrick_filming_with_astronaut.jpg')
+            image1 = pygame.image.load('KeepingNasaAfloat\\Sprites\\Endings\\Win\\Kubrick_filming_with_astronaut.jpg')
             self.background = [image1]
             self.background[0] = pygame.transform.scale(self.background[0], (1031, 683))
-            pygame.mixer.music.load("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Endings\\Win\\Chris Squire - Lucky Seven.wav")
+            pygame.mixer.music.load("KeepingNasaAfloat\\Audio\\Endings\\Win\\Chris Squire - Lucky Seven.wav")
             pygame.mixer.music.set_volume(0.7)
             pygame.mixer.music.play(-1)
 
@@ -70,8 +65,7 @@ class Win:
 
         # Set up sounds
 
-        self.s = pygame.mixer.Sound("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                    "Audio\\Typewriter click.wav")
+        self.s = pygame.mixer.Sound("KeepingNasaAfloat\\Audio\\Typewriter click.wav")
 
         # Pick over-200 or 0 outcome
         self.fake = fake
@@ -99,8 +93,7 @@ class Win:
 
         # Set up font for introduction of the game
 
-        font = pygame.font.Font("C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\"
-                                "Fonts\\atwriter.ttf", font_size)
+        font = pygame.font.Font("KeepingNasaAfloat\\Fonts\\atwriter.ttf", font_size)
 
         if not self.fake:
             a = 0

@@ -1,0 +1,66 @@
+KEEPING NASA AFLOAT:
+
+    The user, through an unexpected chain of events, has become president of NASA.
+
+    As president of NASA, the user will receive a series of requests from:
+
+        - JFK, President of the USA
+        - Private part suppliers
+        - JPL science team
+        - Treasurer
+        - and maybe Stanley Kubrick
+
+    The choices made influence four indexes:
+
+        - Cold-war-meter
+        - Quality of spaceship parts
+        - Scientific and comms capability
+        - Available budget
+        - and maybe money available to fake the landing
+
+    If any index reaches 0, the game ends with catastrophic consequences:
+
+        - USSR wins space race
+        - Saturn V explodes on take-off
+        - Spaceship is forever lost due to faulty calculations
+        - and maybe the public discovers it was all a farce
+
+    After 30 decisions, if NASA is still afloat, an extra minigame can be added:
+
+        - Astronaut minigame
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Data structure for the questions:
+[index, question, d(cold-war-meter), d(quality of parts), d(science), d(budget), d(budget for faking the landing)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+CHARACTER DESCRIPTION:
+
+    - JFK:
+
+        -
+        -
+        -
+        -
+
+    - Sup:
+
+        -
+        -
+        -
+        -
+
+    - Sci:
+
+        -
+        -
+        -
+        -
+
+    -

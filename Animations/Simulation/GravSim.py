@@ -2,8 +2,7 @@
 
 import os
 
-from GAME_pygame.KeepingNasaAfloat.Animations.Simulation.Constants import *
-from GAME_pygame.KeepingNasaAfloat.Animations.Simulation.Definitions import *
+from KeepingNasaAfloat.Animations.Simulation.Definitions import *
 
 os.environ['SDL_VIDEO_CENTERED'] = '1'
 
@@ -13,24 +12,19 @@ def Grav_Sim(win):
 
     screen_size = (455, 683)
 
-    background = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                               'Animations\\Simulation\\Milky Way.jpg')
+    background = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Milky Way.jpg')
     background = pg.transform.scale(background, (455, 683))
     win.blit(background, (0, 0))
 
     size = 1000
 
-    earthpic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                             'Animations\\Simulation\\Earth.png')
+    earthpic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Earth.png')
     earthpic = pg.transform.scale(earthpic, (size, size))
-    moonpic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                            'Animations\\Simulation\\Moon.png')
+    moonpic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Moon.png')
     moonpic = pg.transform.scale(moonpic, (int(size / 1.6), int(size / 1.6)))
-    lunampic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                             'Animations\\Simulation\\LunarModule.png')
+    lunampic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\LunarModule.png')
     lunampic = pg.transform.scale(lunampic, (int(size / 3), int(size / 3)))
-    asteroid = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                             'Animations\\Simulation\\Asteroid.png')
+    asteroid = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Asteroid.png')
     asteroid = pg.transform.scale(asteroid, (int(size / 2), int(size / 2)))
 
     # Inputs:
@@ -71,17 +65,13 @@ def Grav_Sim(win):
             if size-size/10 < 2*earth_radius:
                 zoom = False
             size = size - size / 20
-            earthpic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                     'Animations\\Simulation\\Earth.png')
+            earthpic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Earth.png')
             earthpic = pg.transform.scale(earthpic, (int(size), int(size)))
-            moonpic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                    'Animations\\Simulation\\Moon.png')
+            moonpic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Moon.png')
             moonpic = pg.transform.scale(moonpic, (int(size / 1.6), int(size / 1.6)))
-            lunampic = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                     'Animations\\Simulation\\LunarModule.png')
+            lunampic = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\LunarModule.png')
             lunampic = pg.transform.scale(lunampic, (int(size / 3), int(size / 3)))
-            asteroid = pg.image.load('C:\\Users\\xXY4n\\OneDrive\\Escritorio\\Python\\GAME_pygame\\KeepingNasaAfloat\\'
-                                     'Animations\\Simulation\\Asteroid.png')
+            asteroid = pg.image.load('KeepingNasaAfloat\\Animations\\Simulation\\Asteroid.png')
             asteroid = pg.transform.scale(asteroid, (int(size / 2), int(size / 2)))
             start_time = pg.time.get_ticks()
 
