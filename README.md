@@ -1,6 +1,5 @@
-# Keeping-Nasa-Afloat
-TU Delft python competition 2019
+# Keeping Nasa Afloat!
 
-link:
+Run `Keeping_NASA_afloat.py` and enjoy the ride!
 
-https://mega.nz/#!xTQ2QCTC!AXjaIIDyR_qq4Jtd8vR5R-CWRcRTF4uR0Erpi6joDLI
+#### _TU Delft python competition 2019_
