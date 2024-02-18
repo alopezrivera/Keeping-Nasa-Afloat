@@ -216,5 +216,7 @@ class Engineers:
             pygame.display.update()
             pygame.time.delay(25)
 
-# end = Engineers(False)
-# end.endgame()
+
+if __name__ == '__main__':
+    end = Engineers(False)
+    end.endgame()

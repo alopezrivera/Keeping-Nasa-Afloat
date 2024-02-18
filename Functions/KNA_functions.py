@@ -1,11 +1,5 @@
 from pygame import *
-import numpy
-import scipy
-import matplotlib
-import time
 import random
-
-import sys
 
 
 def open_file_and_write_to_table(file):

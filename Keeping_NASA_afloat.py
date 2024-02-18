@@ -505,7 +505,7 @@ def main():
                     a = new_a
                     b = new_b
                     finding_variable = False
-                    break
+
             score_up = True
         else:
             print_text(display, a, b, Dialogue[b])
